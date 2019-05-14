@@ -11,6 +11,7 @@ let displaySelectedSize = document.getElementById("selected");
 selectItem = () => {  
   isItemSelected = true;
   selectedSize = event.srcElement.id;
+  console.log(selectedSize);
   displaySelectedSize.innerHTML = selectedSize;
 }
 
@@ -19,6 +20,7 @@ addItem = () => {
     itemCount+= 1;
     cartCount.innerHTML = `(${itemCount})`;
     shoppingCart.push(selectedSize);
+    console.log(shoppingCart);
     return itemSuccess();
   } else {
       return itemError();
