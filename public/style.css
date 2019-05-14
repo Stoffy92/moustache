@@ -18,18 +18,27 @@ body {
   flex-direction: row;
 }
 
-.header {
-  text-align: center;
+.header-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.header {
+  display: flex;
+  width: 70%;
   height: 30px;
   background-color: #F6F6F7;
+  justify-content: flex-end;
 }
 
 
 .header-text, 
 #counter {
-  text-align: right;
-  padding-right: 5%;
+  display: flex;
+  flex-direction: row;
   color: #888888;
 }
 
@@ -195,7 +204,6 @@ button:focus {
   }
 
 }
-
 
 
 
