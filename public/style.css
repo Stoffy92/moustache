@@ -176,6 +176,7 @@ button:focus {
     flex-direction: column;
     height: 100vh;
     justify-content: center;
+    width: 75vw;
   }
 
 
@@ -183,7 +184,18 @@ button:focus {
     width: 100%;
   }
 
+  .item-details-header, 
+  .item-details-price, 
+  .item-details-description,
+  .item-details-size, 
+  .button-container, 
+  .add-to-cart-container {
+    margin: 5px;
+    margin-top: 15px;
+  }
+
 }
+
 
 
 
