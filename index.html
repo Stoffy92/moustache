@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Moustache Republic</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="./public/style.css" />
+  </head>
+  <body>
+      <header class="header">
+        <h3 class="header-text">My Cart 
+          <span id="counter"></span>
+        </h3>
+      </header>
+    <div class="main-container">
+      <div class="item-container">
+        <img class="item-image" src="./public/images/classic-tee.jpg" />
+        <div class="item-details-container">
+          <h3 class="item-details-header">Classic Tee</h3>
+          <h4 class="item-details-price">$75.00</h4>
+          <p class="item-details-description">
+              We are a non-profit organization mmm, exactly like that, 
+              but different can you make pink a little more pinkish anyway, 
+              you are the designer, you know what to do. Can you make it stand out more? we are your relatives, 
+              but this looks perfect. Just Photoshop out the dog, add a baby, and make the curtains blue, 
+              but can the black be darker, and i know you've made thirty iterations 
+              but can we go back to the first one that was the best version yet it looks a bit empty, try to make everything bigger, 
+              but you might wanna give it another shot.
+          </p>
+          <p class="item-details-size">SIZE
+            <span class="size">*</span>
+            <span class="selected"></span>
+          </p>
+          <div class="button-container">
+            <button class="size-button" onclick="selectItem()" id="small" value="S">S</button>
+            <button class="size-button" onclick="selectItem()" id="medium"value="M">M</button>
+            <button class="size-button" onclick="selectItem()" id="large" value="L">L</button>
+          </div>
+          <div class="add-to-cart-container">
+              <button class="add-to-cart-button" onclick="addItem()">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+      <div id="success">Item Added to Cart!</div>
+      <div id="error">Please select a Size</div>
+    </div>
+    <script src="public/script.js" async defer></script>
+  </body>
+</html>
