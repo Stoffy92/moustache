@@ -4,20 +4,22 @@ let isItemSelected = false;
 let itemCount = 0;
 let shoppingCart = [];
 let selectedSize = "";
+let displaySelectedSize = document.getElementById("selected");
 
 
 
 selectItem = () => {  
   isItemSelected = true;
-  selectedSize = event.srcElement.id
-  console.log(selectedSize)
+  selectedSize = event.srcElement.id;
+  console.log(selectedSize);
+  displaySelectedSize.innerHTML = selectedSize;
 }
 
 addItem = () => {
   if (isItemSelected === true) {
     itemCount+= 1;
     cartCount.innerHTML = `(${itemCount})`;
-    shoppingCart.push(selectedSize)
+    shoppingCart.push(selectedSize);
     console.log(shoppingCart);
     return itemSuccess();
   } else {
