@@ -2,19 +2,22 @@
 let cartCount = document.getElementById("counter");
 let isItemSelected = false;
 let itemCount = 0;
-let shoppingCart = []
+let shoppingCart = [];
+let selectedSize = "";
+
+
 
 selectItem = () => {  
   isItemSelected = true;
-  console.log(x)
-  
+  selectedSize = event.srcElement.id
+  console.log(selectedSize)
 }
 
 addItem = () => {
   if (isItemSelected === true) {
     itemCount+= 1;
     cartCount.innerHTML = `(${itemCount})`;
-    shoppingCart.push(document.getElementById("small").value)
+    shoppingCart.push(selectedSize)
     console.log(shoppingCart);
     return itemSuccess();
   } else {
