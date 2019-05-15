@@ -213,7 +213,7 @@ button:focus {
     width: 90%;
    }
 
-  .cart { 
+  #cart { 
     display: none;
   }
 	
@@ -252,7 +252,7 @@ button:focus {
     width: 90%;
    }
 	
-  .cart { 
+  #cart { 
     display: none;
   }
 	
