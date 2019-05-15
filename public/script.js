@@ -44,7 +44,6 @@ itemSuccess = () => {
   let successMessage = document.getElementById("success");
   successMessage.className = "show";
   setTimeout(function(){ successMessage.className = successMessage.className.replace("show", ""); }, 3000);
-  console.log(shoppingCart)
 }
 
 displayShoppingCartItems = () => {
