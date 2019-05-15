@@ -11,14 +11,14 @@ let displaySelectedSize = document.getElementById("selected");
 selectItem = () => {  
   isItemSelected = true;
   selectedSize = event.srcElement.id;
-  displaySelectedSize.innerHTML = selectedSize;
+  displaySelectedSize.innerHTML = `${selectedSize}`;
 }
 
 addItem = () => {
   if (isItemSelected === true) {
     itemCount+= 1;
     cartCount.innerHTML = `(${itemCount})`;
-    shoppingCart.push(selectedSize);
+    shoppingCart.push(`${selectedSize}`);
     return itemSuccess();
   } else {
       return itemError();
