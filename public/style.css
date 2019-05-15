@@ -212,6 +212,10 @@ button:focus {
   .header { 
     width: 90%;
    }
+
+  .cart { 
+    display: none;
+  }
 	
   .item-container {
     display: flex;
@@ -243,10 +247,14 @@ button:focus {
 
 @media (min-width: 320px) and (max-width: 480px) { /* Mobile */
 	
- 
+  	 
   .header { 
     width: 90%;
    }
+	
+  .cart { 
+    display: none;
+  }
 	
   .item-container {
     display: flex;
