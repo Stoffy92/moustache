@@ -5,6 +5,7 @@ let itemCount = 0;
 let shoppingCart = [];
 let selectedSize = "";
 let displaySelectedSize = document.getElementById("selected");
+let displayCart = document.getElementById("cart");
 
 
 
@@ -16,9 +17,17 @@ selectItem = () => {
 
 addItem = () => {
   if (isItemSelected === true) {
+
+    const shopItem = {
+      name: "Classic Tee",
+      price: 75,
+      size: `${selectedSize}`
+    }
+
     itemCount+= 1;
-    cartCount.innerHTML = `(${itemCount})`;
-    shoppingCart.push(`${selectedSize}`);
+    cartCount.innerHTML = `(${itemCount})`;    
+    
+    shoppingCart.push(shopItem);
     return itemSuccess();
   } else {
       return itemError();
@@ -35,8 +44,27 @@ itemSuccess = () => {
   let successMessage = document.getElementById("success");
   successMessage.className = "show";
   setTimeout(function(){ successMessage.className = successMessage.className.replace("show", ""); }, 3000);
+  console.log(shoppingCart)
 }
 
 displayShoppingCartItems = () => {
-  shoppingCart.map((items) => {items})
+  const markup = `
+    <div class="shopping-cart">
+      <div class="items">
+        ${shoppingCart.map((item) => 
+          `
+          <span><img class="cart-image" src="./public/images/classic-tee.jpg" /></span>
+          <div class="items-container">
+            <p id="item">${item.name}
+            <span id="item">Size: ${item.size}</span>
+            <span id="item">${item.price}</span>
+            </p>
+          </div>
+          `
+          ).join("")}
+      </div>
+    </div>
+  
+  `;
+  displayCart.innerHTML = markup;
 }
