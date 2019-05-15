@@ -209,6 +209,10 @@ button:focus {
 
 @media (min-width: 768px) and (max-width: 1024px) { /* Tablet */
 
+  .header { 
+    width: 90%;
+   }
+	
   .item-container {
     display: flex;
     flex-direction: column;
@@ -238,14 +242,19 @@ button:focus {
 
 
 @media (min-width: 320px) and (max-width: 480px) { /* Mobile */
-  
+	
+ 
+  .header { 
+    width: 90%;
+   }
+	
   .item-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 90vw;
   }
-
+	
   .item-details-header, 
   .item-details-price, 
   .item-details-description,
