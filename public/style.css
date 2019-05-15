@@ -121,8 +121,8 @@ button:focus {
   height: 4em;
   cursor: pointer;
   background: white;
-	border:1px solid #CCCCCC;
-	text-decoration:none;
+  border:1px solid #CCCCCC;
+  text-decoration:none;
 }
 
 .size-button:focus {
@@ -132,12 +132,12 @@ button:focus {
 .add-to-cart-button {
   width: 15.8em; 
   height: 3em;
-	background-color:#ffffff;
-	border:2px solid #1c001c;
-	display:inline-block;
-	cursor:pointer;
-	padding:6px 24px;
-	text-decoration:none;
+  background-color:#ffffff;
+  border:2px solid #1c001c;
+  display:inline-block;
+  cursor:pointer;
+  padding:6px 24px;
+  text-decoration:none;
 }
 
 .add-to-cart-button:hover {
