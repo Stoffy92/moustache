@@ -55,8 +55,8 @@ displayShoppingCartItems = () => {
           <span><img class="cart-image" src="./public/images/classic-tee.jpg" /></span>
           <div class="items-container">
             <p id="item">${item.name}
-            <span id="item">Size: ${item.size}</span>
-            <span id="item">${item.price}</span>
+            <span id="item">$${item.price}</span>
+            <span id="item">${item.size}</span>
             </p>
           </div>
           `
