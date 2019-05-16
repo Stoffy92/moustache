@@ -56,7 +56,7 @@ displayShoppingCartItems = () => {
           <div class="items-container">
             <p id="item">${item.name}
             <span id="item">$${item.price}</span>
-            <span id="item">${item.size}</span>
+            <span id="item">Size: ${item.size}</span>
             </p>
           </div>
           `
