@@ -71,6 +71,10 @@ body {
   float: right;
 }
 
+.items {
+  margin: 15px;
+}
+
 #item {
   display: flex;
   flex-direction: column;
