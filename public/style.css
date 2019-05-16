@@ -68,6 +68,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 50%;
+  float: right;
 }
 
 #item {
