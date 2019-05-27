@@ -48,6 +48,8 @@ isExistingItem = () => {
     shoppingCart.push(shopItem);
   }
 
+  $("#cart").load(location.href+" #cart>*","");  // reload div when item added to cart
+
 }
 
 itemError = () => {
