@@ -18,20 +18,36 @@ selectItem = () => {
 addItem = () => {
   if (isItemSelected === true) {
 
-    const shopItem = {
-      name: "Classic Tee",
-      price: 75,
-      size: `${selectedSize}`
-    }
+    isExistingItem();
 
     itemCount+= 1;
-    cartCount.innerHTML = `(${itemCount})`;    
+    cartCount.innerHTML = `( ${itemCount}) `;
     
-    shoppingCart.push(shopItem);
     return itemSuccess();
   } else {
       return itemError();
   }
+}
+
+isExistingItem = () => {
+
+  const shopItem = {
+    name: "Classic Tee",
+    price: 75,
+    size: `${selectedSize}`,
+    quantity: 1
+  }
+
+  const existingItem = shoppingCart.find((item) => { // Check if existing size is in cart already
+    return item.size === shopItem.size;
+  });
+    
+  if(existingItem) { // increase quantity if item exists in shopping cart
+    existingItem.quantity++;
+  } else { // add new item
+    shoppingCart.push(shopItem);
+  }
+
 }
 
 itemError = () => {
@@ -57,6 +73,7 @@ displayShoppingCartItems = () => {
             <p id="item">${item.name}
             <span id="item">$${item.price}</span>
             <span id="item">Size: ${item.size}</span>
+            <span id="item">Qty: ${item.quantity}</span>
             </p>
           </div>
           `
